@@ -1,12 +1,13 @@
 pluginManagement {
     repositories {
+        // Добавили официальный портал плагинов Gradle, чтобы сервер смог скачать Foojay
+        gradlePluginPortal()
         maven { url = "https://fabricmc.net" }
         mavenCentral()
     }
 }
 
 plugins {
-    // Перенесли плагин автоскачивания Java сюда, как того требует компилятор
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
 }
 
