@@ -8,7 +8,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Java
+      - name: Setup Java 21 for Gradle
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '21'
+
+      - name: Setup Java 25 for Minecraft
         uses: actions/setup-java@v4
         with:
           distribution: 'oracle'
@@ -18,10 +24,4 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Mod-JAR
-          path: build/libs/*.jar
+        run: ./gradlew build -Dorg.gradle.java.home=$JAVA_HOME_25_X64
