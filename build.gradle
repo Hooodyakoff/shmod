@@ -1,5 +1,6 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
+    // Обновили версию плагина Loom до экспериментальной 1.10, поддерживающей Java 25
+    id 'fabric-loom' version '1.10-SNAPSHOT'
 }
 
 version = '1.0.0'
