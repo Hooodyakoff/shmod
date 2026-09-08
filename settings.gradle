@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
-        // Добавили официальный портал плагинов Gradle, чтобы сервер смог скачать Foojay
-        gradlePluginPortal()
+        // Подняли репозиторий Fabric на первое место, чтобы сборщик сразу нашёл loom
         maven { url = "https://fabricmc.net" }
+        gradlePluginPortal()
         mavenCentral()
     }
 }
