@@ -14,14 +14,8 @@ jobs:
           distribution: 'oracle'
           java-version: '21'
 
-      - name: Setup Java 25 for Minecraft
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'oracle'
-          java-version: '25'
-
       - name: Make Gradle Executable
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew build -Dorg.gradle.java.home=$JAVA_HOME_25_X64
+        run: ./gradlew build
