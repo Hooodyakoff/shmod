@@ -1,6 +1,6 @@
 plugins {
-    // Обновили версию плагина Loom до экспериментальной 1.10, поддерживающей Java 25
-    id 'fabric-loom' version '1.10-SNAPSHOT'
+    // Вернули стабильную версию плагина, которая идеально работает в нашей связке
+    id 'fabric-loom' version '1.7-SNAPSHOT'
 }
 
 version = '1.0.0'
@@ -36,4 +36,3 @@ java {
     sourceCompatibility = JavaVersion.VERSION_25
     targetCompatibility = JavaVersion.VERSION_25
 }
-
