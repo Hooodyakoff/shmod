@@ -16,6 +16,14 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.100.0+26.2"
 }
 
+// Включаем поддержку Toolchain, чтобы автоматически использовать Java 25 для Minecraft
+java {
+    withSourcesJar()
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
 processResources {
     inputs.property "version", project.version
     filteringCharset "UTF-8"
@@ -27,12 +35,4 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     it.options.encoding = "UTF-8"
-    // Указываем компилятору собрать мод строго под Java 25
-    it.options.release = 25
-}
-
-java {
-    withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_25
-    targetCompatibility = JavaVersion.VERSION_25
 }
