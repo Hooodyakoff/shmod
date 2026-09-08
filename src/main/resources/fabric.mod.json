@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "shmod",
+  "version": "1.0.0",
+  "name": "SH Rotation and Lock",
+  "description": "Мод для управления камерой и блокировки мыши командой",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "shmod.ExampleMod"
+
+    ]
+  },
+  "mixins": [
+    "shmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "26.2"
+  }
+}

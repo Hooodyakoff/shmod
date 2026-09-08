@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "package": "shmod.mixin",
+  "client": [
+    "MouseMixin"
+  ]
+}
+
